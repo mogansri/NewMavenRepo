@@ -224,33 +224,26 @@
 <groupId>org.jacoco</groupId>
 <artifactId>jacoco-maven-plugin</artifactId>
 <version>0.7.9</version>
+<configuration>
+<destFile>C:\Program Files (x86)\Jenkins\workspace\MavenProject\MavenProject\target\jacoco.exec</destFile>
+<destFile>C:\Program Files (x86)\Jenkins\workspace\MavenProject\MavenProject\target\jacoco-it.exec</destFile>
+</configuration>
 <executions>
 <execution>
-<id>prepare-ut-agent</id>
-<phase>process-test-classes</phase>
+<id>jacoco-intialize</id>
 <goals>
 <goal>prepare-agent</goal>
 </goals>
-<configuration>
-<destFile>C:\Program Files (x86)\Jenkins\workspace\MavenProject\MavenProject\target\jacoco.exec</destFile>
-<propertyName>jacoco.agent.ut.arg</propertyName>
-<append>true</append>
-</configuration>
 </execution>
 <execution>
-<id>prepare-it-agent</id>
+<id>prepare-site</id>
 <phase>package</phase>
 <goals>
-<goal>prepare-agent-integration</goal>
+<goal>report</goal>
 </goals>
-<configuration>
-<destFile>C:\Program Files (x86)\Jenkins\workspace\MavenProject\MavenProject\target\jacoco-it.exec</destFile>
-<propertyName>jacoco.agent.it.arg</propertyName>
-<append>true</append>
-</configuration>
 </execution>
 </executions>
 </plugin>
-        </plugins>
+ </plugins>
   </build>
  </project>
