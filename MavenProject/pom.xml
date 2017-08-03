@@ -156,10 +156,8 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>2.20</version>
 	      <configuration>
-		      <argLine>          
-       -javaagent:${sonar.jacoco.jar}=destfile=${jacoco.agent.ut.arg}       
-    </argLine>
-<!--<argLine>-Xmx1G -XX:MaxPermSize=512m -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled ${jacoco.agent.ut.arg}</argLine>-->
+		      
+<argLine>-Xmx1G -XX:MaxPermSize=512m -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled ${jacoco.agent.ut.arg}</argLine>
     </configuration>
 
         <executions>
@@ -207,10 +205,8 @@
  		<artifactId>maven-failsafe-plugin</artifactId>
  			<version>2.20</version>
 	      <configuration>
-		       <argLine>          
-       -javaagent:${sonar.jacoco.jar}=destfile=${jacoco.agent.it.arg}       
-    </argLine>
-<!--<argLine>-Xmx1G -XX:MaxPermSize=512m -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled ${jacoco.agent.it.arg}</argLine>-->
+		       
+<argLine>-Xmx1G -XX:MaxPermSize=512m -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled ${jacoco.agent.it.arg}</argLine>
 <!--<includes>
 <include>**/*IT*</include>
 </includes>-->
