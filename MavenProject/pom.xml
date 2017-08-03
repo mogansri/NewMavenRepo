@@ -206,7 +206,6 @@
 	      <configuration>
 <argLine>-Xmx1G -XX:MaxPermSize=512m -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled ${jacoco.agent.it.arg}</argLine>
 <includes>
-<includes>
 <include>**/*IT*</include>
 </includes>
 </configuration>
